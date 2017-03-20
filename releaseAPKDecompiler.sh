@@ -39,7 +39,7 @@ while [[ "$1" == -* ]]; do
 done
 
 # Check a the minimum set of parameters is present. If not show help...
-if [ -z $outputDir ] || [ -z $version ]
+if [ -z "$outputDir" ] || [ -z $version ]
 then
   help
   exit
@@ -76,29 +76,29 @@ echo ""
 
 # Cleanup the output directories
 echo "Cleaning up the output directory"
-rm -Rf $DOE/output
-rm -Rf $DOE/output-res
-mkdir -p $outputDir
+rm -Rf "$DOE/output"
+rm -Rf "$DOE/output-res"
+mkdir -p "$outputDir"
 
 # Copy all the files
 echo "Preparing release..."
 temp="$outputDir/AndroidDecompiler"
-mkdir -p $temp
-cp -r $DOE/* $temp/
+mkdir -p "$temp"
+cp -r "$DOE"/* "$temp"/
 echo "Removing all unncessary files"
-rm $temp/releaseAPKDecompiler.sh
-rm $temp/README.md
+rm "$temp/releaseAPKDecompiler.sh"
+rm "$temp/README.md"
 
 echo "Zipping all files together"
-pushd $temp
-zip -r $outputDir/AndroidDecompiler-$version.zip ./*
-tar -cvf $outputDir/AndroidDecompiler-$version.tar.gz ./*
+pushd "$temp"
+zip -r "$outputDir/AndroidDecompiler-$version.zip" ./*
+tar -cvf "$outputDir/AndroidDecompiler-$version.tar.gz" ./*
 popd
-rm -Rf $temp
+rm -Rf "$temp"
 
 if [[ "$openOutputDir" == true ]];
 then
-	open $outputDir
+	open "$outputDir"
 fi
 
 exit;
