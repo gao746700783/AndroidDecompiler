@@ -7,7 +7,7 @@ Tools
 -----
 To accomplish the goal of a full decompile we use these tools:
 - Dex2Jar : Version 2.1-20150601.060031-26
-- android-apktool : Version 1.5.2
+- android-apktool : Version 2.2.2
 - JD-Core-Java : Version 1.2
 - Artistic Style (astyle) : Version 2.04
 

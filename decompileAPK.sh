@@ -128,7 +128,7 @@ if [[ "$skipResources" == false ]];
 then
 	# Extract all resources from the APK and remove all the unnecessary files from the output
 	echo "Extracting resources from APK file"
-	java -jar "$DOE/apktool/apktool.jar" decode -f "$apkfile" "$resOutputDir"
+	java -jar "$DOE/apktool/apktool.jar" decode "$apkfile" -o "$resOutputDir"
 	rm -Rf "$resOutputDir/smali"
 	rm "$resOutputDir/apktool.yml"
 
