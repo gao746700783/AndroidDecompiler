@@ -24,12 +24,12 @@ usage: decompileAPK.sh [options] <APK-file>
 
 options:
  -o,--output <dir>	The output directory is optional. If not set the
-                         default will be used which is 'output' in the 
+                         default will be used which is 'output' in the
                          root of this tool directory.
  --skipResources	Do not decompile the resource files
  --skipJava		Do not decompile the JAVA files
- -f,--format		Will format all Java files to be easier readable. 
-  			 However, use with CAUTION! This option might change 
+ -f,--format		Will format all Java files to be easier readable.
+  			 However, use with CAUTION! This option might change
   			 line numbers!
  -p,--project		Will generate a Gradle-based Android project for you
  -h,--help		Prints this help message
