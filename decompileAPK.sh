@@ -118,7 +118,7 @@ then
 	if [[ "$formatJava" == true ]];
 	then
 		echo "Start formatting all Java files"
-		"$DOE/astyle/build/mac/bin/astyle" -r -n -q --style=java -s4 -xc -S -K -j "$outputDir"/*.java
+		"$DOE/astyle/build/gcc/bin/astyle" -r -n -q --style=java -s4 -xc -S -K -j "$outputDir"/*.java
 	fi
 else
 	echo "Skipping decompilation of JAVA files"
